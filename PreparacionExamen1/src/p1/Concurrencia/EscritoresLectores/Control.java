@@ -12,11 +12,11 @@ public class Control {
 	}
 
 	public synchronized Object leer(){
-		return datos.get((int) (Math.random()*(datos.size()-1)+0));
+		return datos.get((int) (Math.random()*datos.size()+0));
 	}
 	
 	public synchronized void escribirDato(Object nuevoDato){
-		int posAleatoria = (int) (Math.random()*(datos.size()-1)+0);
+		int posAleatoria = (int) (Math.random()*datos.size()+0);
 		datos.set(posAleatoria, nuevoDato);
 	}
 }
