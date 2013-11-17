@@ -8,7 +8,7 @@ public class Mesa {
 		this.palillos=new Palillo [numeroFilosofos];
 	}
 	
-	public synchronized void cogePalillo(int id) throws InterruptedException{
+	public synchronized void cogePalillo(int id) throws InterruptedException{ 		//Evito interbloqueos haciendo las dos llamadas al método cogePalillo desde un mismo método sincronizado.
 		palillos[id].cogePalillo();
 		palillos[id+1].cogePalillo();
 	}
