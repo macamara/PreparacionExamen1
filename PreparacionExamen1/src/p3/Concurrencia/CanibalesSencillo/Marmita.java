@@ -12,7 +12,7 @@ public class Marmita {
 	
 	public synchronized void comer() throws InterruptedException{
 		while(racionesRestantes==0){
-			rellenar();
+			notifyAll();
 			wait();
 		}
 		racionesRestantes--;
