@@ -11,9 +11,7 @@ public class Cocinero extends Thread{
 	public void run(){
 		while(true){
 			try {
-				wait();
 				marmita.rellenar();
-				notifyAll();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
